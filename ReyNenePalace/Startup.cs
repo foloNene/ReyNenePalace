@@ -39,7 +39,9 @@ namespace ReyNenePalace
             services.AddHttpContextAccessor();
             services.AddSession();
 
-            services.AddControllersWithViews();
+            services.AddControllersWithViews().AddNewtonsoftJson(x =>
+              x.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore);
+
             services.AddRazorPages();
         }
 

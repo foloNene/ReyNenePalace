@@ -19,6 +19,7 @@ namespace ReyNenePalace.Models
             get
             {
                 return _appDbContext.Pies.Include(c => c.Category);
+                //return _appDbContext.Pies.ToList();
             }
         }
 
